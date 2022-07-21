@@ -1,0 +1,20 @@
+[
+  {
+    "firstName":"admin",
+    "lastName": "FInstagram",
+    "profilePicture": "jokowi.jpg",
+    "bio": "hai",
+    "phone": "089917831566",
+    "isPrivacy": true,
+    "UserId": 1
+  },
+  {
+    "firstName":"king",
+    "lastName": "dummy",
+    "profilePicture": "steven.jpeg",
+    "bio": "hai ! my name is user, nice to know you",
+    "phone": "087517812352",
+    "isPrivacy": false,
+    "UserId": 2
+  }
+]

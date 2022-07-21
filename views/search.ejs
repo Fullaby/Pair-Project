@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <%- include('./partials/navbar')%>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-4" style="text-align: center">
+          <img class="rounded-circle" src="/images/<%=user.Profile.profilePicture%>" alt="profile-picture" width="300">
+        </div>
+        <div class="col">
+          <h1><%=user.username%></h1> <br>
+          <%if (user.Profile.privateAccount === 'Public Account') {%>
+          <h5>Posts: </h5><p><%=user.Posts.length%></p>
+          <h5>Name: </h5><p><%=user.Profile.firstName%> <%=user.Profile.lastName%></p>
+          <h5>Phone number: </h5><p><%=user.Profile.phone%></p>
+          <h5>Account type: </h5><p><%=user.Profile.privateAccount%></p>
+          <h5>Bio: </h5><p><%=user.Profile.bio%></p>
+        </div>
+        <hr>
+      </div>
+      <div>
+        <%if (user.Posts.length === 0) {%>
+          <h3 class="text-center">This user has no post.</h3>
+        <%} else {%>
+        <h5>Posts:</h5>
+        <%user.Posts.forEach(post => { %>
+          <div class="row justify-content-center">
+            <div class="card mb-3 col-md-6">
+              <img src="/images/<%=post.imageUrl%>" class="card-img-top" alt="post-image">
+              <div class="card-body">
+                <p class="card-title"><b><%=user.username%></b> <%=post.caption%></p>
+                <p class="card-text"><small class="text-muted"><%=createdAtFormatter(post.createdAt)%></small></p>
+              </div>
+            </div>
+          </div>
+        <%})}} else if (user.Profile.privateAccount === 'Private Account') {%>
+          <h3>This Account is Private</h3>
+        <%}%>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

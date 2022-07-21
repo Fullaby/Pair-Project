@@ -1,0 +1,32 @@
+[
+  {
+    "caption": "amazing komodo world",
+    "imageUrl": "komodo.webp",
+    "UserId": 2
+  },
+  {
+    "caption": "your brother from another mother",
+    "imageUrl": "orangutan.jpg",
+    "UserId": 2
+  },
+  {
+    "caption": "my setup finally complete !! lets go!",
+    "imageUrl": "PC.webp",
+    "UserId": 2
+  },
+  {
+    "caption": "contact me to buy! see my profile",
+    "imageUrl": "tshirt.webp",
+    "UserId": 2
+  },
+  {
+    "caption": "Blueminggg",
+    "imageUrl": "iu1.jpg",
+    "UserId": 1
+  },
+  {
+    "caption": "my favorite singer",
+    "imageUrl": "iu2.jpg",
+    "UserId": 1
+  }
+]

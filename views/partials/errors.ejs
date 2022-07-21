@@ -1,0 +1,5 @@
+<%if (errors) {%>
+  <%errors.split(",").forEach(error => {%>
+    <p style="color: red;"><%=error%></p>
+  <%})%>
+<%}%>
